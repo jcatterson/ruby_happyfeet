@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: Aaron
+  last_name: Stephens
+  school_id: 1
+
+two:
+  first_name: Patrick
+  last_name: Filoshophone
+  school_id: 2
