@@ -4,6 +4,9 @@ class DatauploaderController < ApplicationController
   end
   
   def upload
-    Datauploader.upload params[:file]
+    Datauploader.upload params[:file].path
+    respond_to do |format|
+      format.html { redirect_to students_url }
+    end
   end
 end

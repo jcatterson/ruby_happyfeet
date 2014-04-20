@@ -4,7 +4,10 @@ class Datauploader < Object
     xlsx.default_sheet = xlsx.sheets.first
     header = xlsx.row(1)
     (2..xlsx.last_row).each do |i|
-      Coach.import_row Hash[[header, xlsx.row(i)].transpose]
+      row = Hash[[header, xlsx.row(i)].transpose]
+      coach = Coach.import_row row
+      school = School.import_row row, coach
+      student = Student.import_row row, school
     end
   end
 

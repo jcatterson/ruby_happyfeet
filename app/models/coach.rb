@@ -1,10 +1,10 @@
 class Coach < ActiveRecord::Base
   has_many :schools
   has_many :students, through: :schools
-  scope :by_name, -> (coach_name) { where("lower(first_name)=?", coach_name.downcase) }
+  scope :by_name, -> (coach_name='') { where("lower(first_name)=?", coach_name.downcase) }
   
   def full_name
-    first_name + " " + last_name
+    first_name.to_s + " " + last_name.to_s
   end
   
   def self.import_row( hash_row )
@@ -16,6 +16,7 @@ class Coach < ActiveRecord::Base
       end
       coach.first_name = coach_first_name
       coach.save
+      coach
     end
   end
   
