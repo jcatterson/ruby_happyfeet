@@ -8,6 +8,7 @@ class Coach < ActiveRecord::Base
   end
   
   def self.import_row( hash_row )
+    #find_or_create_by
     coach_first_name = hash_row["Coach"]
     if coach_first_name
       coach = Coach.by_name( coach_first_name ).first
