@@ -16,13 +16,18 @@
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
+    <div>
+      <%= lookup @student %>
+    </div>
+  </div>
+  <div class="field">
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name %>
   </div>
-  <div class="field">
-    <%= f.label :coach_id %><br>
-    <%= f.number_field :school_id %>
-  </div>
+  <!--<div class="field">
+    <%#= f.label :school_id %><br>
+    <%#= f.number_field :school_id %>
+  </div>-->
   <div class="actions">
     <%= f.submit %>
   </div>

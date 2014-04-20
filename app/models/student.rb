@@ -1,5 +1,6 @@
 class Student < ActiveRecord::Base
-  belongs_to :coach
+  belongs_to :school
+  #belongs_to :coach, through: :school
   scope :by_name, ->(first_name='', last_name='') {where('lower(first_name)=? and lower(last_name)=?', first_name.downcase, last_name.downcase ) }
   
   def self.import_row( hash_row, school )
