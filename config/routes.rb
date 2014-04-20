@@ -1,9 +1,10 @@
 Happyfeet::Application.routes.draw do
   resources :schools
-
   resources :students
-
   resources :coaches
+  
+  get 'datauploader' => 'datauploader#index'
+  post 'datauploader/upload' => 'datauploader#upload'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
