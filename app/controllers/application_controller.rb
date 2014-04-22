@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  # Should make this by all models that contains the scope "by_like_name"
   def constantize_with_care(list_of_klasses = [], cls = "" )
     list_of_klasses.each do |klass|
       if cls == klass.to_s
