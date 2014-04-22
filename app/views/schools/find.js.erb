@@ -1,2 +1,2 @@
 $('#found_schools').html();
-$('#found_schools').html("<%= escape_javascript(render partial:'schools/school_list') %>" );
+$('#found_schools').html("<%= escape_javascript(render partial:'found', collection: @found, as: :item) %>" );
