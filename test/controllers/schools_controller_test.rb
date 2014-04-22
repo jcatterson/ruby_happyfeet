@@ -49,6 +49,7 @@ class SchoolsControllerTest < ActionController::TestCase
   end
   
   test "find schools" do
-    assert false, "Test not complete"
+    post :find, { 'school_name' => @school.name}
+    assert_operator 1, :>=, @controller.instance_variable_get(:@found).size, "We expect all schols with a name like x to be found"
   end
 end

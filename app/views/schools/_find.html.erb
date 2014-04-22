@@ -1,4 +1,4 @@
-<%= form_tag "schools/find", :remote=>true do%>
+<%= form_tag schools_find_url, :remote=>true do%>
   <%= text_field_tag "school_name" %>
   <%= submit_tag "Search", data: { disable_with: "Please wait..." }%>
 <%end%>
