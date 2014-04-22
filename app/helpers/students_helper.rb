@@ -6,7 +6,7 @@ module StudentsHelper
       html << ( link_to student.school.name, url_for( student.school ) ).to_s
     end
     html << ( image_tag '/lookup.png', {class: 'lookup_icon' } ).to_s
-    html << "<div class='finder'>" << (render partial: "schools/find").to_s << "</div>"
+    html << ( render partial: "schools/find" ).to_s
     html.html_safe
   end
 end

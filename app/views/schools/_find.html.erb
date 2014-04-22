@@ -1,8 +1,12 @@
-<%= form_tag schools_find_url, :remote=>true do%>
-  <%= text_field_tag "school_name" %>
-  <%= submit_tag "Search", data: { disable_with: "Please wait..." }%>
-<%end%>
+<div class="finder">
 
-<div id="found_schools">
-  <%= render partial: "schools/school_list" %>
+  <%= form_tag schools_find_url, :remote=>true do%>
+    <%= text_field_tag "school_name" %>
+    <%= submit_tag "Search", data: { disable_with: "Please wait..." }%>
+  <%end%>
+
+  <div id="found_schools">
+    <%= render partial: "schools/school_list" %>
+  </div>
+  
 </div>

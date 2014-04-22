@@ -17,13 +17,25 @@ class SchoolsController < ApplicationController
   def find
     @found = []
     if params[:school_name]
-      @found = School.where( "name like ?", "%#{params[:school_name]}%" )
+      cls = constantize_with_care([School], "School")
+      @found = cls.where("name like ?", "%#{params[:school_name]}%" )
     end
     
     respond_to do |format|
       format.html
       format.js
     end
+  end
+  
+  def constantize_with_care(list_of_klasses = [], cls = "" )
+    list_of_klasses.each do |klass|
+      if cls == klass.to_s
+        return cls.constantize
+      end
+    end
+    
+    raise "Not allowed to constantize #{cls}"
+
   end
 
   # GET /schools/new
