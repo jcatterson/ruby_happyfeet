@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   
   def find
     @found = []
-    if params[:school_name]
-      cls = constantize_with_care([School], "School")
+    if params[:school_name] && params[:obj_type]
+      cls = constantize_with_care( [School, Coach], params[:obj_type] )
       @found = cls.by_like_name params[:school_name]
     end
     

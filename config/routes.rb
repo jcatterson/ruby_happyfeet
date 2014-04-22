@@ -1,5 +1,6 @@
 Happyfeet::Application.routes.draw do
   get 'schools/find' => 'schools#find'
+  get 'coaches/find' => 'coaches#find'
   resources :schools
   resources :students
   resources :coaches
