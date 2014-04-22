@@ -1,6 +1,6 @@
 <div class="finder">
   <%= form_tag coaches_find_url, :remote=>true, :method=>:get do%>
-    <%= text_field_tag "school_name" %>
+    <%= text_field_tag "search" %>
     <%= text_field_tag "obj_type", "Coach" %>
     <%= submit_tag "Search", data: { disable_with: "Please wait..." }%>
   <%end%>
