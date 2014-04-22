@@ -47,4 +47,8 @@ class SchoolsControllerTest < ActionController::TestCase
 
     assert_redirected_to schools_path
   end
+  
+  test "find schools" do
+    assert false, "Test not complete"
+  end
 end

@@ -12,6 +12,20 @@ class SchoolsController < ApplicationController
   def show
   end
 
+  # GET /schools/find
+  # POST /schools/find  
+  def find
+    @found = []
+    if params[:school_name]
+      @found = School.where( "name like ?", "%#{params[:school_name]}%" )
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # GET /schools/new
   def new
     @school = School.new

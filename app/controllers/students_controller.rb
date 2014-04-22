@@ -5,6 +5,10 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+    respond_to do |format|
+      format.html
+      format.json { render :json=> @students.to_json }
+    end
   end
 
   # GET /students/1
