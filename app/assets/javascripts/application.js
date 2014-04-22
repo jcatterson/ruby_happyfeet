@@ -15,9 +15,3 @@
 //= require jquery.ui.all
 //= require turbolinks
 //= require_tree .
-
-$(function(){
-    $('.lookup_icon').click( function(){
-        $(this).datepicker();
-    });
-});
