@@ -18,7 +18,7 @@ class SchoolsController < ApplicationController
     @found = []
     if params[:school_name]
       cls = constantize_with_care([School], "School")
-      @found = cls.where("name like ?", "%#{params[:school_name]}%" )
+      @found = cls.by_like_name params[:school_name]
     end
     
     respond_to do |format|
