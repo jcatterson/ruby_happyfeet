@@ -6,5 +6,5 @@ $ ->
         $(".finder").dialog "open"
 
     $(".finder").not(":eq(0)").remove()
-    $(".finder").dialog({autoOpen: false})
+    $(".finder").dialog({autoOpen: false, width: 500})
 
