@@ -20,5 +20,3 @@ test = (id, setting_id)->
         type: "post",
         data:
             "setting_id":setting_id
-        ,
-        success: (data, status, xhr, something)->

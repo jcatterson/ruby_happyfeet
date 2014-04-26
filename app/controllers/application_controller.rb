@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
     end
     
     respond_to do |format|
-      format.html { render :nothing=>true }
       format.js
+      format.html { render :nothing=>true }
     end
   end
   

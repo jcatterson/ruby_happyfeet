@@ -1,10 +1,8 @@
 <div class="finder">
 
-  <%= form_tag schools_find_url, :remote=>true, :method=>:get do%>
-    <%= text_field_tag "search" %>
-    <%= text_field_tag "obj_type", "School" %>
-    <%= submit_tag "Search", data: { disable_with: "Please wait..." }%>
-  <%end%>
+  <%= text_field_tag "search", "", :id=>"search_tag" %>
+  <%= text_field_tag "obj_type", "School", :id=>"setting_id" %>
+  <input type="button" value="Search" id="lookup_search"/>
 
   <div id="found_schools">
   </div>
