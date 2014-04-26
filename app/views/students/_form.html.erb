@@ -17,10 +17,12 @@
   </div>
   <div class="field">
     <div>
-      <%= f.label :coach_name %><br>
+      <%= f.label :school_id %><br>
+      <%= f.text_field :school_id, :id=>"students_school_id"%>
       <div id="lookup_section">
         <%= lookup @student, true %>
       </div>
+      
     </div>
   </div>
   <div class="field">

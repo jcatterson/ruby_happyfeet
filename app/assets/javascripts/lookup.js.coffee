@@ -19,6 +19,7 @@ something = (id, setting_id)->
             "id":id
         ,
         success: (data, status, xhr) ->
+            $('#students_school_id').val( setting_id ).change();
             console.log "got this far"
             console.log data
             console.log xhr
