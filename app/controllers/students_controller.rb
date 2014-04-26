@@ -10,6 +10,23 @@ class StudentsController < ApplicationController
       format.json { render :json=> @students.to_json }
     end
   end
+  
+  def test
+    @students = Student.all.limit 10
+    mapped_student_ids = @students.map(&:id)
+    for i in 0..mapped_student_ids.size
+      if mapped_student_ids[i] == params["id"].to_i
+        editedStudent = @students[i]
+        break
+      end
+    end
+    
+    editedStudent.school_id = params["setting_id"]
+    respond_to do |format|
+      format.js {}
+      format.html {render :nothing=>true}
+    end
+  end
 
   # GET /students/1
   # GET /students/1.json

@@ -10,7 +10,7 @@
   <tbody>
     <% @found.each do |school| %>
       <tr>
-        <td><%=school.name%></td>
+        <td><span class="lookup_link" school_id="<%=school.id%>"><%=school.name%></span></td>
         <td>
           <% if school.coach != nil%>
             <%=school.coach.full_name%>

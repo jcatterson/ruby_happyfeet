@@ -1,0 +1,91 @@
+
+*** These modified files were found in JOE when it aborted on Fri Apr 25 17:02:23 2014
+*** JOE was aborted because the terminal closed
+
+*** File 'app/assets/javascripts/students.js.coffee'
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+    $(".lookup_icon").click ->
+        $(".finder").dialog "open"
+        $(".finder").attr('student_id', $(this).attr("student_id") )
+
+    $(".finder").not(":eq(0)").remove()
+    $(".finder").dialog({autoOpen: false, width: 500})
+
+    $(document).on "click", ".lookup_link", ->
+        finder = $(".finder")
+        finder.dialog "close"
+        test( $(".finder").attr("student_id"), $(this).attr("school_id") )
+
+test = (id, setting_id)->
+    $.ajax
+        url: "/students/" + id + "/test",
+        type: "post",
+        data:
+            "setting_id":setting_id
+
+*** File '(Unnamed)'
+1000%3
+335.16+181.00+50+80+151.02+30
+335.16+181
+1799-516
+6+4+2+4+4.5+5+2.5+5.5+6.5
+1+1.5+1+6.5+6.5
+16.5+8+4.5+10+40
+33.5+10+4.5+8+16.5
+10+6
+30.5+13+4.5+8+16.5
+
+*** File '(Unnamed)'
+ls
+sys
+sys
+run
+run
+
+*** File '(Unnamed)'
+"Scorecard" ../codebase -r -i -n
+
+*** File '(Unnamed)'
+ls ~/
+~/HappyFeet/android-sdk-linux/tools/android update sdk --no-ui
+ls
+
+*** File '(Unnamed)'
+cart
+user_name
+=\n
+    
+quotes
+full
+CLOSEST_COAX
+fuckStaging
+thisYear
+errorMessage
+
+*** File '(Unnamed)'
+Scenario
+criteriaPassingAccount
+testMethod
+testMethod
+autoCreate
+Criterion__c
+Criterion__c
+getField
+message
+json
+
+*** File '(Unnamed)'
+app/controllers/students_controller.rb
+app/controllers/students_controller.rb
+app/views/students/test.js.erb
+app/controllers/students_controller.rb
+app/controllers/students_controller.rb
+app/controllers/students_controller.rb
+app/controllers/students_controller.rb
+app/views/students/test.js.erb
+app/assets/javascripts/students.js.coffee
+app/assets/javascripts/students.js.coffee
+app/assets/javascripts/students.js.coffee
