@@ -12,19 +12,15 @@ class StudentsController < ApplicationController
   end
   
   def test
-    @students = Student.all.limit 10
-    mapped_student_ids = @students.map(&:id)
-    for i in 0..mapped_student_ids.size
-      if mapped_student_ids[i] == params["id"].to_i
-        editedStudent = @students[i]
-        break
-      end
-    end
+    school = School.find params["setting_id"]
     
-    editedStudent.school_id = params["setting_id"]
+    @student = Student.find params['id']
+    @student.school_id = school.id
+    @student.school = school
+    
     respond_to do |format|
       format.js {}
-      format.html {render :nothing=>true}
+      format.html { render :nothing=>true }
     end
   end
 

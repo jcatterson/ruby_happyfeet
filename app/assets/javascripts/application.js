@@ -20,9 +20,8 @@ $(function(){
     $(document).on( "click", "#lookup_search", function(){
         search_txt = $("#search_tag").val();
         setting_id = $("#setting_id").val();
-        console.log("You cloicked me");
         $.ajax({
-            url: "/schools/find/" + search_txt,
+            url: "/schools/find/",
             type: "get",
             data:{
                 "search":search_txt,

@@ -2,7 +2,7 @@ class Student < ActiveRecord::Base
   belongs_to :school
   has_one :coach, through: :school
   
-  default_scope -> { includes(:school).order("schools.name") }
+  default_scope -> { includes(:school) }#.order("schools.name") }
   scope :by_name, ->(first_name='', last_name='') {where('lower(first_name)=? and lower(last_name)=?', first_name.downcase, last_name.downcase ) }
   
   def self.import_row( hash_row, school )

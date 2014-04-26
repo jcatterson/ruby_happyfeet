@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def find
+    
     @found = []
     if params[:search] && params[:obj_type]
       cls = constantize_with_care( [School, Coach], params[:obj_type] )
@@ -11,7 +12,7 @@ class ApplicationController < ActionController::Base
     end
     
     respond_to do |format|
-      format.js
+      format.js {}
       format.html { render :nothing=>true }
     end
   end

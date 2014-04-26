@@ -18,7 +18,9 @@
   <div class="field">
     <div>
       <%= f.label :coach_name %><br>
-      <%= lookup @student, true %>
+      <div id="lookup_section">
+        <%= lookup @student, true %>
+      </div>
     </div>
   </div>
   <div class="field">
