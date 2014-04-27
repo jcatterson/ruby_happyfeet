@@ -1,0 +1,4 @@
+//console.log("the url...");
+console.log("<%=j @url %>");
+$('#found_schools').html();
+$('#found_schools').html("<%= escape_javascript(render partial:@url)%>" );

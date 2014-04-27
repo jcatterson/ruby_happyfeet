@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <div id="lookup_section">
+    <%= lookup @school, "coach", true %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

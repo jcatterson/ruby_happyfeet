@@ -20,7 +20,7 @@
       <%= f.label :school_id %><br>
       <%= f.text_field :school_id, :id=>"students_school_id"%>
       <div id="lookup_section">
-        <%= lookup @student, true %>
+        <%= lookup @student, "school", true %>
       </div>
       
     </div>
@@ -33,5 +33,3 @@
     <%= f.submit %>
   </div>
 <% end %>
-
-

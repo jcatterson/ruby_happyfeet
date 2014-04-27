@@ -47,9 +47,5 @@ class SchoolsControllerTest < ActionController::TestCase
 
     assert_redirected_to schools_path
   end
-  
-  test "find schools" do
-    post :find, { 'search' => @school.name, 'obj_type' => 'School'}
-    assert_operator 1, :>=, @controller.instance_variable_get(:@found).size, "We expect all schols with a name like x to be found"
-  end
+
 end

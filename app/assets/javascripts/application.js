@@ -15,18 +15,3 @@
 //= require jquery.ui.all
 //= require turbolinks
 //= require_tree .
-
-$(function(){
-    $(document).on( "click", "#lookup_search", function(){
-        search_txt = $("#search_tag").val();
-        setting_id = $("#setting_id").val();
-        $.ajax({
-            url: "/schools/find/",
-            type: "get",
-            data:{
-                "search":search_txt,
-                "obj_type":setting_id
-            }
-        });
-    });
-});

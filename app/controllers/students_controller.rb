@@ -12,7 +12,8 @@ class StudentsController < ApplicationController
   end
   
   def test
-    school = School.find params["setting_id"]
+    school = School.find params["foreign_key"]
+    @field_to_set = params["foreign_key_field"]
     
     @student = Student.find params['id']
     @student.school_id = school.id
