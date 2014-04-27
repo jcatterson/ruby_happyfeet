@@ -14,9 +14,7 @@
       <tr>
         <td><%=school.name%></td>
         <td>
-          <% if school.coach != nil%>
-            <%=school.coach.name%>
-          <%end%>
+          <%= lookup school, 'coach', false %>
         </td>
         <td><%= link_to 'Show', school %></td>
         <td><%= link_to 'Edit', edit_school_path(school) %></td>

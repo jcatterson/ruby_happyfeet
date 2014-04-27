@@ -1,4 +1,4 @@
-$ ->
+$(".finder").ready ->
     lookup = new Lookup
 
 class Lookup
@@ -36,7 +36,7 @@ class Lookup
                 type: "get",
                 data:
                     "search":search_txt,
-                    "obj_type":"School"
+                    "obj_type":evt.data.object_type_to_find
 
     set_lookup: (id, foreign_key, foreign_key_field) ->
         $.ajax

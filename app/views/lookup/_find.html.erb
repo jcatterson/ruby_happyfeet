@@ -1,13 +1,12 @@
 <div class="finder">
 
   <div id="lookup_arguments">
-    <span id="setting_id">School</span>
+    <span id="setting_id"><%= lookup_field %></span>
   </div>
 
   <%= text_field_tag "search", "", :id=>"search_tag" %>
   <input type="button" value="Search" id="lookup_search"/>
 
-  <div id="found_schools">
-  </div>
+  <div id="found_schools"/>
   
 </div>

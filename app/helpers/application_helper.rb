@@ -7,7 +7,7 @@ module ApplicationHelper
     end
     if is_editable
       html << ( image_tag '/lookup.png', { class: 'lookup_icon', "student_id"=>obj_type.id } ).to_s
-      html << ( render partial: "/lookup/find", :student=>@school).to_s
+      html << ( render partial: "/lookup/find", :locals=>{:lookup_field=>lookup_field} ).to_s
     end
     
     html.html_safe
