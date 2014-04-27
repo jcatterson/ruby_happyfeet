@@ -11,10 +11,16 @@
     </div>
   <% end %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <div id="lookup_section">
-    <%= lookup @school, "coach", f %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :coach_id %><br>
+    <div id="lookup_section">
+      <%= lookup @school, "coach", f %>
+    </div>
   </div>
 
   <div class="actions">

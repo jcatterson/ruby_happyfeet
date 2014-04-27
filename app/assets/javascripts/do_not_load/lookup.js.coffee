@@ -8,6 +8,7 @@ class Lookup
 
     set_variables: ->
         @_object_type_to_find = $("#setting_id").html()
+        @_table_name = $('#table_name').html()
         $("#lookup_arguments").remove()
 
     dialog_search_definition: ->
@@ -18,11 +19,11 @@ class Lookup
             $(".finder").attr('student_id', $(this).attr("student_id") )    
 
     user_sets_the_lookup_evnt: ->
-        $("#found_objects").on "click", ".lookup_link", {set_lookup: @set_lookup, foreign_key_field: @_object_type_to_find}, (evt) ->
+        $("#found_objects").on "click", ".lookup_link", {set_lookup: @set_lookup, foreign_key_field: @_object_type_to_find, table_name: @_table_name}, (evt) ->
             console.log "About to set the lookup"
             finder = $(".finder")
             finder.dialog "close"
-            evt.data.set_lookup $(".finder").attr("student_id"), $(this).attr("lookup_id"), evt.data.foreign_key_field
+            evt.data.set_lookup $(".finder").attr("student_id"), evt.data.table_name,$(this).attr("lookup_id"), evt.data.foreign_key_field
 
     user_searches_for_matches_evnt: ->
         $("#lookup_search").click {object_type_to_find: @_object_type_to_find}, (evt)->
@@ -35,14 +36,15 @@ class Lookup
                     "search":search_txt,
                     "obj_type":evt.data.object_type_to_find
 
-    set_lookup: (id, foreign_key, foreign_key_field) ->
+    set_lookup: (id, table_name, foreign_key, foreign_key_field) ->
         $.ajax
             url: "/lookup/set",
             type: "post",
             data:
                 "foreign_key":foreign_key
                 "foreign_key_field":foreign_key_field
-                "id":id
+                "id":id,
+                "table_name":table_name
             ,
             success: (data, status, xhr) ->
                 $('#objects_lookup_id').val( foreign_key ).change();
