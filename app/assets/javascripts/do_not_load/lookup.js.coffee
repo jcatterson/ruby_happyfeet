@@ -1,7 +1,3 @@
-$("#found_schools").ready ->
-    console.log "Loading the lookup"
-    lookup = new Lookup
-
 class Lookup
 
     constructor: () ->
@@ -51,3 +47,6 @@ class Lookup
             success: (data, status, xhr) ->
                 $('#students_school_id').val( foreign_key ).change();
                 lookup = new Lookup()
+$ ->
+    console.log "Loading the lookup"
+    lookup = new Lookup()

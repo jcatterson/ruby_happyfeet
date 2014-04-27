@@ -1,9 +1,0 @@
-Run options: --seed 41116
-
-# Running tests:
-
-.......................
-
-Finished tests in 3.071945s, 7.4871 tests/s, 13.9976 assertions/s.
-
-23 tests, 43 assertions, 0 failures, 0 errors, 0 skips
