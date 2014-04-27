@@ -1,5 +1,3 @@
-<h1>Listing coaches</h1>
-
 <table>
   <thead>
     <tr>
@@ -11,7 +9,7 @@
     <% @found.each do |coach| %>
       <tr>
         <td>
-          <span>
+          <span class="lookup_link" lookup_id="<%=coach.id%>">
             <%= coach.name %>
           </span>
         </td>

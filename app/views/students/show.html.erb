@@ -12,7 +12,7 @@
 
 <p>
   <strong>School:</strong>
-  <%= @student.school_id %>
+  <%= lookup @student, "school", false %>
 </p>
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
