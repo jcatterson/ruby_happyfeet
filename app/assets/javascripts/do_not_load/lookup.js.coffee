@@ -18,7 +18,7 @@ class Lookup
             $(".finder").attr('student_id', $(this).attr("student_id") )    
 
     user_sets_the_lookup_evnt: ->
-        $("#found_schools").on "click", ".lookup_link", {set_lookup: @set_lookup, foreign_key_field: @_object_type_to_find}, (evt) ->
+        $("#found_objects").on "click", ".lookup_link", {set_lookup: @set_lookup, foreign_key_field: @_object_type_to_find}, (evt) ->
             console.log "About to set the lookup"
             finder = $(".finder")
             finder.dialog "close"
