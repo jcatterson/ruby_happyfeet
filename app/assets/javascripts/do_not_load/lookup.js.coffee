@@ -46,7 +46,6 @@ class Lookup
             ,
             success: (data, status, xhr) ->
                 $('#students_school_id').val( foreign_key ).change();
-                lookup = new Lookup()
 $ ->
     console.log "Loading the lookup"
     lookup = new Lookup()
