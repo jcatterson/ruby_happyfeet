@@ -10,12 +10,9 @@
   <tbody>
     <% @found.each do |school| %>
       <tr>
-        <td><span class="lookup_link" school_id="<%=school.id%>"><%=school.name%></span></td>
+        <td><span class="lookup_link" lookup_id="<%=school.id%>"><%=school.name%></span></td>
         <td>
           <%= lookup school, "coach", false %>
-          <%# if school.coach != nil%>
-            <%#=school.coach.name%>
-          <%#end%>
         </td>
       </tr>
     <% end %>

@@ -22,7 +22,7 @@ class Lookup
             console.log "About to set the lookup"
             finder = $(".finder")
             finder.dialog "close"
-            evt.data.set_lookup $(".finder").attr("student_id"), $(this).attr("school_id"), evt.data.foreign_key_field
+            evt.data.set_lookup $(".finder").attr("student_id"), $(this).attr("lookup_id"), evt.data.foreign_key_field
 
     user_searches_for_matches_evnt: ->
         $("#lookup_search").click {object_type_to_find: @_object_type_to_find}, (evt)->
