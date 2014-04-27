@@ -1,4 +1,5 @@
-$(".finder").ready ->
+$("#found_schools").ready ->
+    console.log "Loading the lookup"
     lookup = new Lookup
 
 class Lookup
@@ -48,5 +49,5 @@ class Lookup
                 "id":id
             ,
             success: (data, status, xhr) ->
-                $('#students_school_id').val( setting_id ).change();
+                $('#students_school_id').val( foreign_key ).change();
                 lookup = new Lookup()
