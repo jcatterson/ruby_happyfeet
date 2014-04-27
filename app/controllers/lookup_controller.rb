@@ -15,10 +15,10 @@ class LookupController < ApplicationController
   def set_lookup
     @field_to_set = params["foreign_key_field"]
     foreign_keys_type = constantize_with_care( params[:foreign_key_field] )
-    school = foreign_keys_type.find params["foreign_key"]
+    foreign_object = foreign_keys_type.find params["foreign_key"]
     
     @student = Student.find params['id']
-    @student.school_id = school.id
+    @student[ @field_to_set + "_id"] = foreign_object.id
     
     respond_to do |format|
       format.js {}
