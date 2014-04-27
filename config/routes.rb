@@ -1,6 +1,6 @@
 Happyfeet::Application.routes.draw do
   get "lookup/" => 'lookup#find'
-  post 'students/test/' => 'students#test'
+  post 'lookup/set/' => 'lookup#set_lookup'
 
   resources :schools
   resources :students

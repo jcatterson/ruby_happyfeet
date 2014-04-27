@@ -10,20 +10,6 @@ class StudentsController < ApplicationController
       format.json { render :json=> @students.to_json }
     end
   end
-  
-  def test
-    school = School.find params["foreign_key"]
-    @field_to_set = params["foreign_key_field"]
-    
-    @student = Student.find params['id']
-    @student.school_id = school.id
-    @student.school = school
-    
-    respond_to do |format|
-      format.js {}
-      format.html { render :nothing=>true }
-    end
-  end
 
   # GET /students/1
   # GET /students/1.json

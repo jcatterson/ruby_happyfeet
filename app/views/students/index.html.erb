@@ -14,7 +14,7 @@
       <tr>
         <td><%= student.first_name %></td>
         <td><%= student.last_name %></td>
-        <td><%= lookup student, "school", false %></td>
+        <td><%= lookup student, "school" %></td>
         <td><%= link_to 'Show', student %></td>
         <td><%= link_to 'Edit', edit_student_path(student) %></td>
         <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>

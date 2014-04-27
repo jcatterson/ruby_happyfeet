@@ -18,9 +18,9 @@
   <div class="field">
     <div>
       <%= f.label :school_id %><br>
-      <%= f.text_field :school_id, :id=>"objects_lookup_id"%>
+      
       <div id="lookup_section">
-        <%= lookup @student, "school", true %>
+        <%= lookup @student, "school", f %>
       </div>
       
     </div>

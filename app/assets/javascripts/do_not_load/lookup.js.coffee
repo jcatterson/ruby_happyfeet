@@ -37,7 +37,7 @@ class Lookup
 
     set_lookup: (id, foreign_key, foreign_key_field) ->
         $.ajax
-            url: "/students/test",
+            url: "/lookup/set",
             type: "post",
             data:
                 "foreign_key":foreign_key
