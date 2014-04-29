@@ -18,6 +18,8 @@ module ApplicationHelper
     lookup_field.downcase!
     if obj_type != nil && obj_type.send( lookup_field )
       html << (link_to obj_type.send(lookup_field).name, url_for(obj_type.send(lookup_field) ), {:id=>"lookup_link"} ).to_s
+    else
+      html << (link_to 'NULL', 'http://www.packers.com', {:id=>"lookup_link"} ).to_s
     end
     
     html.html_safe
