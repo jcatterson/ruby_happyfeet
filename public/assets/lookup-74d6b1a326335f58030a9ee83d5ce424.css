@@ -1,0 +1,9 @@
+/* line 4, /home/justin/ruby/happyfeet/happyfeet/app/assets/stylesheets/lookup.css.scss */
+.lookup_link {
+  cursor: pointer;
+}
+
+/* line 8, /home/justin/ruby/happyfeet/happyfeet/app/assets/stylesheets/lookup.css.scss */
+#objects_lookup_id {
+  display: none;
+}
