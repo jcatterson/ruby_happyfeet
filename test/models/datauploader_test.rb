@@ -6,8 +6,10 @@ class DatauploaderTest < ActiveSupport::TestCase
     Coach.delete_all
     School.delete_all
     Student.delete_all
+    
     file = Rack::Test::UploadedFile.new "test/roster.xlsx"
     Datauploader.upload file.path
+    
     names = Coach.all.pluck(:first_name)
     schools = School.all.pluck(:name)
     students = Student.all
