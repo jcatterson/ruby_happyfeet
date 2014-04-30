@@ -17,9 +17,11 @@ class LookupController < ApplicationController
     table_name = constantize_with_care( params["table_name"].singularize )
     foreign_keys_type = constantize_with_care( params[:foreign_key_field] )
     foreign_object = foreign_keys_type.find params["foreign_key"]
-    
-    @student = table_name.find params['id']
+
+    @student = table_name.new
+    @student.id = params['id']
     @student[ @field_to_set + "_id"] = foreign_object.id
+    
     
     respond_to do |format|
       format.js {}
