@@ -13,7 +13,6 @@ class LookupController < ApplicationController
   end
   
   def set_lookup
-=begin  
     @field_to_set = params["foreign_key_field"]
     table_name = constantize_with_care( params["table_name"].singularize )
     foreign_keys_type = constantize_with_care( params[:foreign_key_field] )
@@ -26,7 +25,6 @@ class LookupController < ApplicationController
       format.js {}
       format.html { render :nothing=>true }
     end
-=end
   end
 
   # Should make this by all models that contains the scope "by_like_name"

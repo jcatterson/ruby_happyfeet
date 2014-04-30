@@ -1,0 +1,103 @@
+2014-04-30T05:11:07.246400+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/application.rb:97:in `call'
+2014-04-30T05:11:07.246402+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+2014-04-30T05:11:07.246403+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+2014-04-30T05:11:07.246404+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+2014-04-30T05:11:07.246406+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+2014-04-30T05:11:07.246407+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+2014-04-30T05:11:07.246408+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+2014-04-30T05:11:07.246411+00:00 app[web.1]: 
+2014-04-30T05:11:07.246410+00:00 app[web.1]: 
+2014-04-30T05:11:07.250692+00:00 app[web.1]: Started GET "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png" for 68.173.121.241 at 2014-04-30 05:11:07 +0000
+2014-04-30T05:11:07.250698+00:00 app[web.1]: Started GET "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png" for 68.173.121.241 at 2014-04-30 05:11:07 +0000
+2014-04-30T05:11:07.251973+00:00 app[web.1]: 
+2014-04-30T05:11:07.251976+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png"):
+2014-04-30T05:11:07.251978+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2014-04-30T05:11:07.251979+00:00 app[web.1]:   vendor/bundle/r
+uby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2014-04-30T05:11:07.251980+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:38:in `call_app'
+2014-04-30T05:11:07.251982+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:20:in `block in call'
+2014-04-30T05:11:07.251983+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+2014-04-30T05:11:07.251985+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+2014-04-30T05:11:07.251986+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:68:in `tagged'
+2014-04-30T05:11:07.251987+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:20:in `call'
+2014-04-30T05:11:07.251989+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2014-04-30T05:11:07.251990+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+2014-04-30T05:11:07.251992+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+2014-04-30T05:11:07.251993+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+2014-04-30T05:11:07.251994+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/static.rb:64:in `call'
+2014-04-30T05:11:07.251995+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+2014-04-30T05:11:07.251997+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/engine.rb:511:in `call'
+2014-04-30T05:11:07.251998+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/application.rb:97:in `call'
+2014-04-30T05:11:07.252016+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+2014-04-30T05:11:07.252015+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+2014-04-30T05:11:07.252018+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+2014-04-30T05:11:07.252019+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+2014-04-30T05:11:07.252022+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+2014-04-30T05:11:07.252023+00:00 app[web.1]: 
+2014-04-30T05:11:07.252024+00:00 app[web.1]: 
+2014-04-30T05:11:07.252029+00:00 app[web.1]: 
+2014-04-30T05:11:07.252030+00:00 app[web.1]: ActionController::RoutingError (No route matches [GET] "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png"):
+2014-04-30T05:11:07.252032+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+2014-04-30T05:11:07.252033+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+2014-04-30T05:11:07.252034+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:38:in `call_app'
+2014-04-30T05:11:07.252036+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:20:in `block in call'
+2014-04-30T05:11:07.252037+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+2014-04-30T05:11:07.252038+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:26:in `tagged'
+2014-04-30T05:11:07.252049+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/tagged_logging.rb:68:in `tagged'
+2014-04-30T05:11:07.252051+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/rack/logger.rb:20:in `call'
+2014-04-30T05:11:07.252052+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/ge
+ms/actionpack-4.0.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+2014-04-30T05:11:07.252053+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+2014-04-30T05:11:07.252055+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+2014-04-30T05:11:07.252021+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+2014-04-30T05:11:07.252062+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/application.rb:97:in `call'
+2014-04-30T05:11:07.252063+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+2014-04-30T05:11:07.252064+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+2014-04-30T05:11:07.252056+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/activesupport-4.0.4/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+2014-04-30T05:11:07.252058+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/static.rb:64:in `call'
+2014-04-30T05:11:07.252059+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+2014-04-30T05:11:07.252060+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/railties-4.0.4/lib/rails/engine.rb:511:in `call'
+2014-04-30T05:11:07.252065+00:00 app[web.1]:   vendor/bundle/ruby/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+2014-04-30T05:11:07.252067+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+2014-04-30T05:11:07.252068+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+2014-04-30T05:11:07.252071+00:00 app[web.1]: 
+2014-04-30T05:11:07.252072+00:00 app[web.1]: 
+2014-04-30T05:11:07.252069+00:00 app[web.1]:   vendor/ruby-2.0.0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+2014-04-30T05:11:09.373991+00:00 heroku[router]: at=info method=GET path=/lookup/?search=&obj_type=coach host=tranquil-spire-4228.herokuapp.com request_id=3fd64cda-2523-454a-b47f-82081fb9d48b fwd="68.173.121.241" dyno=web.1 connect=1ms service=33ms status=304 bytes=1023
+2014-04-30T05:11:09.338877+00:00 app[web.1]: Started GET "/lookup/?search=&obj_type=coach" for 68.173.121.241 at 2014-04-30 05:11:09 +0000
+2014-04-30T05:11:09.338887+00:00 app[web.1]: Started GET "/lookup/?search=&obj_type=coach" for 68.173.121.241 at 2014-04-30 05:11:09 +0000
+2014-04-30T05:11:09.366442+00:00 app[web.1]:   Rendered coaches/_found.html.erb (17.4ms)
+2014-04-30T05:11:09.343105+00:00 app[web.1]: Processing by LookupController#find as */*
+2014-04-30T05:11:09.343111+00:00 app[web.1]: Processing by LookupController#find as */*
+2014-04-30T05:11:09.343140+00:00 app[web.1]:   Parameters: {"search"=>"", "obj_type"=>"coach"}
+2014-04-30T05:11:09.343152+00:00 app[web.1]:   Parameters: {"search"=>"", "obj_type"=>"coach"}
+2014-04-30T05:11:09.366448+00:00 app[web.1]:   Rendered coaches/_found.html.erb (17.4ms)
+2014-04-30T05:11:09.366618+00:00 app[web.1]:   Rendered lookup/find.js.erb (19.0ms)
+2014-04-30T05:11:09.366613+00:00 app[web.1]:   Rendered lookup/find.js.erb (19.0ms)
+2014-04-30T05:11:09.366856+00:00 app[web.1]: Completed 200 OK in 24ms (Views: 10.4ms | ActiveRecord: 10.9ms)
+2014-04-30T05:11:09.366874+00:00 app[web.1]: Completed 200 OK in 24ms (Views: 10.4ms | ActiveRecord: 10.9ms)
+2014-04-30T05:11:11.613293+00:00 heroku[router]: at=info method=POST path=/lookup/set host=tranquil-spire-4228.herokuapp.com request_id=fe8727a9-3d37-4661-81d8-2f868633d34f fwd="68.173.121.241" dyno=web.1 connect=0ms service=19ms status=500 bytes=1543
+2014-04-30T05:11:11.603124+00:00 app[web.1]: Processing by LookupController#set_lookup as */*
+2014-04-30T05:11:11.603131+00:00 app[web.1]: Processing by LookupController#set_lookup as */*
+2014-04-30T05:11:11.599808+00:00 app[web.1]: Started POST "/lookup/set" for 68.173.121.241 at 2014-04-30 05:11:11 +0000
+2014-04-30T05:11:11.599817+00:00 app[web.1]: Started POST "/lookup/set" for 68.173.121.241 at 2014-04-30 05:11:11 +0000
+2014-04-30T05:11:11.603161+00:00 app[web.1]:   Parameters: {"foreign_key"=>"1", "foreign_key_field"=>"coach", "table_name"=>"schools"}
+2014-04-30T05:11:11.610066+00:00 app[web.1]:   Rendered lookup/set_lookup.js.erb (2.6ms)
+2014-04-30T05:11:11.610187+00:00 app[web.1]: Completed 500 Internal Server Error in 7ms
+2014-04-30T05:11:11.603289+00:00 app[web.1]:   Parameters: {"foreign_key"=>"1", "foreign_key_field"=>"coach", "table_name"=>"schools"}
+2014-04-30T05:11:11.611768+00:00 app[web.1]:     1: $('#lookup_link').html("").html("<%=j lookup_link(@student, @field_to_set) %>");
+2014-04-30T05:11:11.611754+00:00 app[web.1]: 
+2014-04-30T05:11:11.611770+00:00 app[web.1]:   app/helpers/application_helper.rb:18:in `lookup_link'
+2014-04-30T05:11:11.611773+00:00 app[web.1]: 
+2014-04-30T05:11:11.611757+00:00 app[web.1]: ActionView::Template::Error (undefined method `downcase!' for nil:NilClass):
+2014-04-30T05:11:11.611782+00:00 app[web.1]:     1: $('#lookup_link').html("").html("<%=j lookup_link(@student, @field_to_set) %>");
+2014-04-30T05:11:11.611783+00:00 app[web.1]:   app/helpers/application_helper.rb:18:in `lookup_link'
+2014-04-30T05:11:11.611774+00:00 app[web.1]: 
+2014-04-30T05:11:11.610060+00:00 app[web.1]:   Rendered lookup/set_lookup.js.erb (2.6ms)
+2014-04-30T05:11:11.610213+00:00 app[web.1]: Completed 500 Internal Server Error in 7ms
+2014-04-30T05:11:11.611785+00:00 app[web.1]:   app/views/lookup/set_lookup.js.erb:1:in `_app_views_lookup_set_lookup_js_erb___2077929495588889034_70204635440320'
+2014-04-30T05:11:11.611786+00:00 app[web.1]: 
+2014-04-30T05:11:11.611788+00:00 app[web.1]: 
+2014-04-30T05:11:11.611771+00:00 app[web.1]:   app/views/lookup/set_lookup.js.erb:1:in `_app_views_lookup_set_lookup_js_erb___2077929495588889034_70204635440320'
+2014-04-30T05:11:11.611780+00:00 app[web.1]: ActionView::Template::Error (undefined method `downcase!' for nil:NilClass):
+2014-04-30T05:11:11.611779+00:00 app[web.1]: 

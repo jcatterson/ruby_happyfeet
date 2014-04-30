@@ -15,7 +15,9 @@ module ApplicationHelper
   
   def lookup_link( obj_type, lookup_field )
     html = ""
-    lookup_field.downcase!
+    if lookup_field
+      lookup_field.downcase!
+    end
     if obj_type != nil && obj_type.send( lookup_field )
       html << (link_to obj_type.send(lookup_field).name, url_for(obj_type.send(lookup_field) ), {:id=>"lookup_link"} ).to_s
     else
