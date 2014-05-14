@@ -5,6 +5,10 @@ class CoachesController < ApplicationController
   # GET /coaches.json
   def index
     @coaches = Coach.all
+    respond_to do |format|
+      format.html
+      format.json { render :json=> @coaches.to_json }
+    end
   end
 
   # GET /coaches/1
