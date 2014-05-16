@@ -1,4 +1,5 @@
 Happyfeet::Application.routes.draw do
+  root 'schools#index'
   resources :student_attendances
 
   resources :attendances
