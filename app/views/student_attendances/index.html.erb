@@ -5,7 +5,7 @@
     <tr>
       <th>Attendance</th>
       <th>Student</th>
-      <th></th>
+      <th>Did Attend</th>
       <th></th>
       <th></th>
     </tr>
@@ -15,7 +15,8 @@
     <% @student_attendances.each do |student_attendance| %>
       <tr>
         <td><%= student_attendance.attendance_id %></td>
-        <td><%= student_attendance.student_id %></td>
+        <td><%= lookup student_attendance, "student" %></td>
+        <td><%= student_attendance.did_attend %></td>
         <td><%= link_to 'Show', student_attendance %></td>
         <td><%= link_to 'Edit', edit_student_attendance_path(student_attendance) %></td>
         <td><%= link_to 'Destroy', student_attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
