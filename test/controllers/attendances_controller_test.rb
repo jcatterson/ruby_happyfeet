@@ -23,8 +23,8 @@ class AttendancesControllerTest < ActionController::TestCase
   	coach = coaches(:one)
   	school = schools(:one)
   	
-  	student_one_record = StudentAttendance.new( :student_id=>students(:one) )
-  	student_two_record = StudentAttendance.new( :student_id=>students(:two) )
+  	student_one_record = StudentAttendance.new( :student_id=>students(:one), :did_attend=>true )
+  	student_two_record = StudentAttendance.new( :student_id=>students(:two), :did_attend=>false )
   	
   	student_records = [student_one_record, student_two_record]
 
