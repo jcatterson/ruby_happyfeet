@@ -15,6 +15,28 @@ class AttendancesControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
+  
+  test "create attendance records" do
+  	Attendance.delete_all
+  	StudentAttendance.delete_all
+  	
+  	coach = coaches(:one)
+  	school = schools(:one)
+  	
+  	student_one_record = StudentAttendance.new( :student_id=>students(:one) )
+  	student_two_record = StudentAttendance.new( :student_id=>students(:two) )
+  	
+  	student_records = [student_one_record, student_two_record]
+
+  	post :upload, attendance_records: student_records.to_json
+  	
+  	attendances = Attendance.all
+  	assert_equal 1, attendances.size, 'When student records is called, we expect an attendance record to get created'
+  	
+  	student_attendances = StudentAttendance.where :attendance_id=>attendances[0].id
+  	assert_equal 2, student_attendances.size, 'When we pass two students for attendances for uploading, we expect the records to get created'
+  	
+  end
 
   test "should create attendance" do
     assert_difference('Attendance.count') do

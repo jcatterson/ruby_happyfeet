@@ -11,6 +11,22 @@ class AttendancesController < ApplicationController
   # GET /attendances/1.json
   def show
   end
+  
+  def upload
+  	attendance_line_items = JSON.parse params[:attendance_records]
+  	school_record = Attendance.create
+  	
+  	attendance_line_items.each do |record|
+  		student_attendance = StudentAttendance.new record.to_hash
+  		student_attendance.attendance_id = school_record.id
+  		student_attendance.save
+  	end
+  	
+  	respond_to do |format|
+  		format.html { render :nothing=>true }
+  		format.json { render :json=>school_record.to_json }
+  	end
+  end
 
   # GET /attendances/new
   def new
