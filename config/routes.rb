@@ -1,4 +1,8 @@
 Happyfeet::Application.routes.draw do
+  resources :student_attendances
+
+  resources :attendances
+
   get "lookup/" => 'lookup#find'
   post 'lookup/set/' => 'lookup#set_lookup'
 

@@ -1,0 +1,31 @@
+<h1>Listing attendances</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>School</th>
+      <th>Coach</th>
+      <th>Attendance date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attendances.each do |attendance| %>
+      <tr>
+        <td><%= attendance.school_id %></td>
+        <td><%= attendance.coach_id %></td>
+        <td><%= attendance.attendance_date %></td>
+        <td><%= link_to 'Show', attendance %></td>
+        <td><%= link_to 'Edit', edit_attendance_path(attendance) %></td>
+        <td><%= link_to 'Destroy', attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attendance', new_attendance_path %>
