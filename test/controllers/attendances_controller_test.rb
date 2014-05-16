@@ -28,10 +28,11 @@ class AttendancesControllerTest < ActionController::TestCase
   	
   	student_records = [student_one_record, student_two_record]
 
-  	post :upload, attendance_records: student_records.to_json
+  	post :upload, attendance_records: student_records.to_json, :format=>'json'
   	
   	attendances = Attendance.all
   	assert_equal 1, attendances.size, 'When student records is called, we expect an attendance record to get created'
+  	assert_equal attendances[0].id, JSON.parse( @response.body )["id"].to_i, 'When the parse was successful, we expect the response to retun the json version of the Attendance record'
   	
   	student_attendances = StudentAttendance.where :attendance_id=>attendances[0].id
   	assert_equal 2, student_attendances.size, 'When we pass two students for attendances for uploading, we expect the records to get created'
