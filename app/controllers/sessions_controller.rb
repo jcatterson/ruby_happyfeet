@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
   skip_before_filter :authorize
-  
-  def new
-    #redirect_to store_url
-  end
+
+   def new
+   end
 
   def create
     if user = User.authenticate( params[:name], params[:password] )
