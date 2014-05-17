@@ -3,6 +3,8 @@ require 'test_helper'
 class StudentAttendancesControllerTest < ActionController::TestCase
   setup do
     @student_attendance = student_attendances(:one)
+    @user = users(:one)
+    session[:user_id] = @user.id
   end
 
   test "should get index" do
