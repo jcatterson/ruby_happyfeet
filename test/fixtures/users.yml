@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email_address: dave
+  password: <%= User.encrypt_password( 'test' ) %>
+
+two:
+  email_address: someUser
+  password: <%= User.encrypt_password( 'test' ) %>

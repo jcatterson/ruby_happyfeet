@@ -1,4 +1,6 @@
 Happyfeet::Application.routes.draw do
+  resources :users
+
   root 'schools#index'
   resources :student_attendances
 
@@ -14,6 +16,12 @@ Happyfeet::Application.routes.draw do
   get 'datauploader' => 'datauploader#index'
   post 'datauploader/upload' => 'datauploader#upload'
   post 'attendances/upload' => 'attendances#upload'
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
