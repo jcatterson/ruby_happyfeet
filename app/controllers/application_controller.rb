@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   protected
     def authorize
+      print "what is the user_id?" << session[:user_id]
       unless User.find_by_id( session[:user_id] )
         redirect_to login_url, :notice=>'Please log in'
       end
