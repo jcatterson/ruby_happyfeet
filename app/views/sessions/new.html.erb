@@ -3,7 +3,7 @@
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
-  <%= form_tag do %>
+  <%= form_tag '/login', :id=>'login' do %>
     <fieldset>
       <legend>Please Log In</legend>
 
@@ -18,7 +18,7 @@
       </div>
   
       <div>
-        <%= submit_tag "Login", :id=>"login" %>
+        <%= submit_tag "Login"%>
       </div>
     </fieldset>
   <% end %>
