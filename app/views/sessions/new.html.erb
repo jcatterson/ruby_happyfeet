@@ -3,6 +3,12 @@
     <p id="notice"><%= flash[:alert] %></p>
   <% end %>
 
+  <script>
+    window.onload = function(){
+      alert('testing');
+    }
+  </script>
+
   <%= form_tag do %>
     <fieldset>
       <legend>Please Log In</legend>
