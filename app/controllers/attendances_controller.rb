@@ -15,7 +15,9 @@ class AttendancesController < ApplicationController
   
   def upload
   	attendance_line_items = JSON.parse params[:attendance_records]
-  	school_record = Attendance.create :attendance_date=>DateTime.current, :school_id=>params[:school_id]
+  	coach = Coach.find_by_user_id session[:user_id]
+  	
+  	school_record = Attendance.create :attendance_date=>DateTime.current, :school_id=>params[:school_id], :coach_id=>coach.id
   	
   	attendance_line_items.each do |record|
   		student_attendance = StudentAttendance.new record.to_hash

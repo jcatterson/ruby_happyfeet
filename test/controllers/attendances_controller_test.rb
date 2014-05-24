@@ -23,6 +23,8 @@ class AttendancesControllerTest < ActionController::TestCase
   	StudentAttendance.delete_all
   	
   	coach = coaches(:one)
+  	coach.user_id = @user.id
+  	coach.save
   	school = schools(:one)
   	
   	student_one_record = StudentAttendance.new( :student_id=>students(:one), :did_attend=>true )
@@ -35,6 +37,7 @@ class AttendancesControllerTest < ActionController::TestCase
   	attendances = Attendance.where :school_id=>school.id
   	assert_equal 1, attendances.size, 'When student records is called, we expect an attendance record to get created'
   	assert_equal attendances[0].id, JSON.parse( @response.body )["id"].to_i, 'When the parse was successful, we expect the response to retun the json version of the Attendance record'
+  	assert_equal coach.id,  attendances[0].coach_id, 'We expect the running user coach to be the owner of the attendance record'
   	
   	student_attendances = StudentAttendance.where :attendance_id=>attendances[0].id
   	assert_equal 2, student_attendances.size, 'When we pass two students for attendances for uploading, we expect the records to get created'
