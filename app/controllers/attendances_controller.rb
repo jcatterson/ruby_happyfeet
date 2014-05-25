@@ -1,6 +1,6 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token, :only=>[:upload]
+  #skip_before_filter :verify_authenticity_token, :only=>[:upload]
 
   # GET /attendances
   # GET /attendances.json
@@ -20,8 +20,14 @@ class AttendancesController < ApplicationController
   	school_record = Attendance.create :attendance_date=>DateTime.current, :school_id=>params[:school_id], :coach_id=>coach.id
   	
   	attendance_line_items.each do |record|
-  		student_attendance = StudentAttendance.new record.to_hash
+  	  record = record.to_hash
+  	  student = Student.find_by_id record["student"]["id"]
+  	  updated_student = record["student"]
+  	  
+  		student_attendance = StudentAttendance.new record["attendance"], :student_id=>student.id
   		student_attendance.attendance_id = school_record.id
+      student.update updated_student.to_hash
+  		
   		student_attendance.save
   	end
   	

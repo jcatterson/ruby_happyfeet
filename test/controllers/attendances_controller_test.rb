@@ -26,11 +26,17 @@ class AttendancesControllerTest < ActionController::TestCase
   	coach.user_id = @user.id
   	coach.save
   	school = schools(:one)
+  	student_a = students(:one)
+  	student_a.dropped = true
+  	student_b = students(:two)
   	
-  	student_one_record = StudentAttendance.new( :student_id=>students(:one), :did_attend=>true )
-  	student_two_record = StudentAttendance.new( :student_id=>students(:two), :did_attend=>false )
+  	student_one_record = StudentAttendance.new( :did_attend=>true )
+  	student_two_record = StudentAttendance.new( :did_attend=>false )
   	
-  	student_records = [student_one_record, student_two_record]
+  	attendance_a = {"student"=>student_a, "attendance"=>student_one_record}
+  	attendance_b = {"student"=>student_b, "attendance"=>student_two_record}
+  	
+  	student_records = [attendance_a, attendance_b]
 
   	post :upload, attendance_records: student_records.to_json, :school_id=>school.id, :format=>'json'
   	
@@ -41,6 +47,9 @@ class AttendancesControllerTest < ActionController::TestCase
   	
   	student_attendances = StudentAttendance.where :attendance_id=>attendances[0].id
   	assert_equal 2, student_attendances.size, 'When we pass two students for attendances for uploading, we expect the records to get created'
+  	
+  	student_a = Student.find_by_id! student_a.id
+  	assert_equal true, student_a.dropped
   	
   end
 
