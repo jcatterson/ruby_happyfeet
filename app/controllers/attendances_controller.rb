@@ -23,6 +23,7 @@ class AttendancesController < ApplicationController
   	  record = record.to_hash
   	  student = Student.find_by_id record["student"]["id"]
   	  updated_student = record["student"]
+  	  print record["attendances"]
   	  
   		student_attendance = StudentAttendance.new record["attendance"], :student_id=>student.id
   		student_attendance.attendance_id = school_record.id
