@@ -1,6 +1,6 @@
 class AttendancesController < ApplicationController
   before_action :set_attendance, only: [:show, :edit, :update, :destroy]
-  #skip_before_filter :verify_authenticity_token, :only=>[:upload]
+  skip_before_filter :verify_authenticity_token, :only=>[:upload]
 
   # GET /attendances
   # GET /attendances.json
