@@ -10,6 +10,13 @@
 
     #login input{
       width: 75%;
+      height: 45px;
+      border-radius: 45px;
+      font-size: 30px;
+    }
+
+    #login div{
+      margin-bottom: 3px;
     }
   </style>
 
@@ -18,11 +25,11 @@
       <legend>Please Log In</legend>
 
       <div>
-        <%= text_field_tag :name, params[:name] %>
+        <%= text_field_tag :name, params[:name], :placeholder=>"email" %>
       </div>
 
       <div>
-        <%= password_field_tag :password, params[:password] %>
+        <%= password_field_tag :password, params[:password], :placeholder=>"password" %>
       </div>
   
       <div>
