@@ -23,7 +23,7 @@ class AttendancesController < ApplicationController
   	  record = record.to_hash
   	  student = Student.find_by_id record["student"]["id"]
   	  
-  	  print "The student" << record["student"]
+  	  #print "The student" << record["student"]
   	  updated_student = record["student"]
   	  #print record["attendances"]
   	  
