@@ -1,6 +1,8 @@
 class Coach < ActiveRecord::Base
   has_many :schools
   has_many :students, through: :schools
+  belongs_to :user
+  
   scope :by_name, -> (coach_name='') { where("lower(first_name)=?", coach_name.downcase) }
   scope :by_like_name, -> (coach_name='') { where('first_name like ?', "%#{coach_name}%") }
   
