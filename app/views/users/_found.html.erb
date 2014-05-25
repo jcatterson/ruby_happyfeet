@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @found.each do |user| %>
+      <tr>
+        <td>
+          <span class="lookup_link" lookup_id="<%=user.id%>">
+            <%= user.name %>
+          </span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

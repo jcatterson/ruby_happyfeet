@@ -44,6 +44,6 @@ class LookupController < ApplicationController
   
   private
     def safe_to_constantize
-      [School, Coach, Student]
+      [School, Coach, Student, User]
     end
 end

@@ -14,14 +14,16 @@ class AttendancesController < ApplicationController
   end
   
   def upload
+
   	attendance_line_items = JSON.parse params[:attendance_records]
   	coach = Coach.find_by_user_id session[:user_id]
-  	
+
   	school_record = Attendance.create :attendance_date=>DateTime.current, :school_id=>params[:school_id], :coach_id=>coach.id
-  	
+
   	attendance_line_items.each do |record|
   	  record = record.to_hash
   	  student = Student.find_by_id record["student"]["id"]
+  	  
   	  updated_student = record["student"]
   	  
   		student_attendance = StudentAttendance.new record["attendance"]

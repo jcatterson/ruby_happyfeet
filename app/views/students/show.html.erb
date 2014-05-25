@@ -15,5 +15,10 @@
   <%= lookup @student, "school" %>
 </p>
 
+<p>
+  <strong># Soccer Balls:</strong>
+  <%= @student.soccerballs %>
+</p>
+
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>

@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   validates :email_address, presence: true, uniqueness: true
   validates :password, presence: true
   validates :user_password, confirmation: true
+  scope :by_name, ->(name='') { where("lower(email_address)=?", name.downcase) }
+  scope :by_like_name, ->(name='') { where("lower(email_address) like ?", "%#{name.downcase}%") }
   
   attr_reader :user_password
   def user_password=(new_password)
@@ -24,6 +26,10 @@ class User < ActiveRecord::Base
         usr
       end
     end
+  end
+  
+  def name
+  	email_address
   end
   
 end

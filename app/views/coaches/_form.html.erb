@@ -19,6 +19,16 @@
     <%= f.label :last_name %><br>
     <%= f.text_area :last_name %>
   </div>
+  <div class="field">
+    <div>
+      <%= f.label :user_id %><br>
+      
+      <div id="lookup_section">
+        <%= lookup @coach, "user", f %>
+      </div>
+      
+    </div>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
