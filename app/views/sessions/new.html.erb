@@ -11,7 +11,7 @@
     #login input{
       width: 90%;
       height: 45px;
-      border-radius: 45px;
+      border-radius: 10px;
       font-size: 30px;
     }
 
@@ -25,11 +25,11 @@
       <legend>Please Log In</legend>
 
       <div>
-        <%= text_field_tag :name, params[:name], :placeholder=>"email" %>
+        <%= text_field_tag :name, params[:name], :placeholder=>"Enter your email address" %>
       </div>
 
       <div>
-        <%= password_field_tag :password, params[:password], :placeholder=>"password" %>
+        <%= password_field_tag :password, params[:password], :placeholder=>"Enter your password" %>
       </div>
   
       <div>
