@@ -21,12 +21,14 @@ class AttendancesController < ApplicationController
   	
   	attendance_line_items.each do |record|
   	  record = record.to_hash
-  	  print record["student"]
   	  student = Student.find_by_id record["student"]["id"]
+  	  
+  	  print "The student" << record["student"]
   	  updated_student = record["student"]
-  	  print record["attendances"]
+  	  #print record["attendances"]
   	  
   		student_attendance = StudentAttendance.new record["attendance"], :student_id=>record["student"]["id"]
+  		student_attendance.student_id = record["student"]["id"]
   		student_attendance.attendance_id = school_record.id
       student.update updated_student.to_hash
   		
