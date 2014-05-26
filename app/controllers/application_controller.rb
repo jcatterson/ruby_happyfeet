@@ -10,18 +10,19 @@ class ApplicationController < ActionController::Base
     def user_serial
 
     	if params[:serial]
-    	  u = User.find_by_password params[:serial]
+    	  u = User.find_by_serial params[:serial]
     	  if u
-    	    session[:user_id] = User.find_by_password( params[:serial] ).id
+    	    session[:user_id] = u.id
 				end    	  
     	end
     end
     
     def authorize
-
-      unless User.find_by_id( session[:user_id] )
+			u = User.find_by_id( session[:user_id] )
+      unless u
         redirect_to login_url, :notice=>'Please log in'
       end
+      
     end
   
 end

@@ -8,11 +8,16 @@ class User < ActiveRecord::Base
   validates :user_password, confirmation: true
   scope :by_name, ->(name='') { where("lower(email_address)=?", name.downcase) }
   scope :by_like_name, ->(name='') { where("lower(email_address) like ?", "%#{name.downcase}%") }
+  before_save :set_serial
   
   attr_reader :user_password
   def user_password=(new_password)
     @user_password = new_password
     self.password = User.encrypt_password @user_password
+  end
+  
+  def set_serial
+  	self.serial = self.id.to_s + self.password.to_s
   end
   
   def self.encrypt_password( unencrypted_pass )

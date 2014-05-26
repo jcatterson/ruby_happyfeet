@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
   def create
     if user = User.authenticate( params[:name], params[:password] )
       session[:user_id] = user.id
-      cookies[:serial] = user.password
+      cookies[:serial] = user.id.to_s + user.password.to_s
       redirect_to coaches_url
     else
       session[:user_id] = nil
