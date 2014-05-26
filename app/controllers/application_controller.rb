@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
   protected
   
     def user_serial
+
     	if params[:serial]
-    		session[:user_id] = User.find_by_serial( params[:serial] ).id
+    	  u = User.find_by_password params[:serial]
+    	  if u
+    	    session[:user_id] = User.find_by_password( params[:serial] ).id
+				end    	  
     	end
     end
     
