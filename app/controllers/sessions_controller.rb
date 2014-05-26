@@ -2,6 +2,10 @@ class SessionsController < ApplicationController
   skip_before_filter :authorize
 
    def new
+     respond_to do |format|
+       format.html
+       format.json { render :json => "Please Log on" }
+     end
    end
 
   def create
