@@ -12,9 +12,9 @@ class ApplicationController < ActionController::Base
     	if params[:serial]
     	  u = User.find_by_serial params[:serial]
     	  if u
-    	    print "it was found via serial"
+    	    print "it was found via serial" << @user.id
     	    @user = u
-    	    session[:user_id] = u.id
+    	    session[:user_id] = @user.id
 				end    	  
     	end
     end
