@@ -17,8 +17,9 @@ class AttendancesController < ApplicationController
 
   	attendance_line_items = JSON.parse params[:attendance_records]
   	if @user
-  		print "I have a user..." + @user.to_s
+	  	print "I have a user..." + @user.id.to_s
 	  	coach = Coach.find_by_user_id @user.id
+	  	print "Do i have a coach?" + coach.to_s
 	  else
 	  	print "I have a session..." + session[:user_id].to_s
 	  	coach = Coach.find_by_user_id session[:user_id]
