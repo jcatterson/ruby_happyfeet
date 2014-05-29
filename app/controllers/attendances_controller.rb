@@ -20,6 +20,7 @@ class AttendancesController < ApplicationController
 	  	coach = Coach.find_by_user_id @user.id
 	  else
 	  	coach = Coach.find_by_user_id session[:user_id]
+	  end
 
   	school_record = Attendance.create :attendance_date=>DateTime.current, :school_id=>params[:school_id], :coach_id=>coach.id
 
