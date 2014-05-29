@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     	  if u
     	    print "it was found via serial"
     	    @user = u
+    	    session[:user_id] = u.id
 				end    	  
     	end
     end
