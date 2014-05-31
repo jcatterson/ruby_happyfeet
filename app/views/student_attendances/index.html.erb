@@ -1,20 +1,21 @@
 <h1>Listing student_attendances</h1>
 
-<table>
+<table class="attendance_table">
   <thead>
     <tr>
       <th>Attendance</th>
       <th>Student</th>
       <th>Did Attend</th>
-      <th></th>
-      <th></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @student_attendances.each do |student_attendance| %>
       <tr>
-        <td><%= student_attendance.attendance_id %></td>
+        <td><%= lookup student_attendance, "attendance" %></td>
         <td><%= lookup student_attendance, "student" %></td>
         <td><%= student_attendance.did_attend %></td>
         <td><%= link_to 'Show', student_attendance %></td>

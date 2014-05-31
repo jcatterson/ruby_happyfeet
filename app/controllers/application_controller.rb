@@ -9,8 +9,9 @@ class ApplicationController < ActionController::Base
   
     def user_serial
 
-    	if params[:serial]
-    	  u = User.find_by_serial params[:serial]
+	    #print "Do I have any cookies?" << 
+    	if cookies["serial"]#.to_s#params[:serial]
+    	  u = User.find_by_serial cookies["serial"].to_s#params[:serial]
     	  if u
     	    @user = u
     	    print "it was found via serial" << @user.id
